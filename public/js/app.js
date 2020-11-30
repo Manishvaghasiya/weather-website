@@ -16,7 +16,9 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.error;
             } else {
                 messageOne.textContent = data.location;
-                messageTwo.textContent = data.forecast.weather_descriptions;
+                messageTwo.textContent = 'On time ' + data.forecast.observation_time + ' weather was ' +
+                    data.forecast.weather_descriptions + '. Wind was comming from ' + data.forecast.wind_dir +
+                    ' and speed was ' + data.forecast.wind_speed + ' Mile per hour.';
             }
         });
     });
